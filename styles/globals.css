@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Install Prettier for auto class sorting */
+/* [1] npm install -D prettier-plugin-tailwindcss */
+/* [2] create .prettierrc.json in the project root (dont forget the . in the name)*/
+/* [3] add: 
+{
+    "plugins": ["prettier-plugin-tailwindcss"]
+  } */
+/* [4] If it is not working - first try relaunching VS code */
+
+
+
+/* CSS Variables based on project design */
+@layer base {
+  :root {
+    /* Primary Clrs */
+
+    --soft-red: 10, 79%, 65%;
+    --cyan: 186, 34%, 60%;
+
+    /* Secondary Clrs */
+    --brown-800: 25, 47%, 15%;
+    --brown-600: 28, 10%, 53%;
+    --cream: 27, 66%, 92%;
+    --orange-200: 33, 100%, 98%;
+
+
+  }
+}
+
+.test {
+  color: hsl(25, 47%, 15%);
+  color: hsl(28, 10%, 53%);
+  color: hsl(27, 66%, 92%);
+  color: hsl(33, 100%, 98%);
+
+}
