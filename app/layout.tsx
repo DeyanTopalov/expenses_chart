@@ -15,9 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${dmSans.className}text-lg bg-clr-cream grid h-svh w-svw place-content-center gap-0 antialiased md:h-screen md:w-full`}
+        className={`${dmSans.className} bg-clr-cream grid h-svh w-svw place-content-center gap-0 text-lg antialiased md:h-screen md:w-full`}
       >
-        <main className="grid h-svh w-svw place-items-center bg-blue-200 px-4 md:max-w-[90rem]">
+        <main className="grid h-svh w-svw place-items-center px-4 md:max-w-[90rem]">
           {children}
         </main>
       </body>
