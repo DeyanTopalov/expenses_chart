@@ -32,6 +32,8 @@
 }
 
 .test {
+  color: hsl(10, 79%, 65%);
+  color: hsl(186, 34%, 60%);
   color: hsl(25, 47%, 15%);
   color: hsl(28, 10%, 53%);
   color: hsl(27, 66%, 92%);
