@@ -8,7 +8,7 @@ const Card = ({ className }: classNameProps) => {
         <h2 className="text-2xl font-bold  md:text-3xl">
           Spending - Last 7 days
         </h2>
-        <div className=" mt-[3.25rem] h-[11.125rem] w-full">
+        <div className=" mt-[3.25rem] h-[11.125rem] w-full md:mt-[4.125rem]">
           <BarChartComponent />
         </div>
       </div>

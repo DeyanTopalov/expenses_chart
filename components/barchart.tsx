@@ -53,7 +53,7 @@ const BarChartComponent = () => {
               active={active ?? false}
             />
           )}
-          cursor={{ fill: "white" }}
+          cursor={{ fill: "hsl(var(--orange-200))" }}
           position={{ y: 0 }}
         />
         <Bar
