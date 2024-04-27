@@ -1,4 +1,5 @@
 import Footer from "./footer";
+import BarChartComponent from "./barchart";
 
 const Card = ({ className }: classNameProps) => {
   return (
@@ -7,7 +8,9 @@ const Card = ({ className }: classNameProps) => {
         <h2 className="text-2xl font-bold  md:text-3xl">
           Spending - Last 7 days
         </h2>
-        <div className="chart mt-[3.25rem] h-[177px] w-full bg-green-200"></div>
+        <div className="chart mt-[3.25rem] h-[177px] w-full">
+          <BarChartComponent />
+        </div>
       </div>
       <Footer className="mt-6 flex items-end justify-between md:mt-8" />
     </div>
