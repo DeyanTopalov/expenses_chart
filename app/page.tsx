@@ -5,8 +5,8 @@ import Card from "@components/card";
 export default function Home() {
   return (
     <section className="grid w-full max-w-[33.75rem] gap-6">
-      <Header className="bg-clr-soft-red w-full rounded-xl" />
-      <Card className=" h-[421px] w-full rounded-xl bg-white px-5 pt-6 shadow-lg" />
+      <Header className="bg-clr-soft-red w-full rounded-xl md:rounded-3xl" />
+      <Card className="h-full w-full rounded-xl bg-white px-5 pb-6 pt-6 shadow-lg md:rounded-3xl md:px-10 md:pb-10 md:pt-8" />
     </section>
   );
 }
