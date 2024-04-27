@@ -18,5 +18,3 @@ const Card = ({ className }: classNameProps) => {
 };
 
 export default Card;
-
-// add desktop layout
