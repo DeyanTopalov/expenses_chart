@@ -1,5 +1,12 @@
 "use client";
-import { ResponsiveContainer, BarChart, Bar, XAxis, Tooltip } from "recharts";
+import {
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  Tooltip,
+} from "recharts";
 import { chartData } from "@lib/utils";
 
 type TooltipProps = {
@@ -11,15 +18,21 @@ type TooltipProps = {
 const CustomTooltip = ({ payload, label, active }: TooltipProps) => {
   if (active && payload && payload.length) {
     return (
-      <div className="text-clr-cyan fond-bold rounded-md bg-white px-4 py-2 shadow-2xl">
-        <p className="font-medium capitalize">{label}</p>
-        <p className="text-clr-brown-800 font-bold">{`$ ${payload[0].value}`}</p>
+      <div className=" -ml-14 rounded-md bg-slate-950 px-4 py-2  shadow-2xl">
+        <p className="font-bold text-white">{`$ ${payload[0].value}`}</p>
       </div>
     );
   }
 };
 
 const BarChartComponent = () => {
+  const today = new Date();
+  const currentWeekday = today
+    .toLocaleDateString("en-us", {
+      weekday: "short",
+    })
+    .toLowerCase();
+
   return (
     <ResponsiveContainer width="100%" height="100%">
       <BarChart data={chartData}>
@@ -41,14 +54,27 @@ const BarChartComponent = () => {
             />
           )}
           cursor={{ fill: "white" }}
+          position={{ y: 0 }}
         />
-
         <Bar
           dataKey="amount"
-          fill="hsl(var(--soft-red))"
           radius={[5, 5, 5, 5]}
-          className="hover:fill-clr-cyan cursor-pointer transition-all duration-100 ease-in-out"
-        />
+          className="cursor-pointer transition-all  duration-100 ease-in-out"
+        >
+          {chartData.map((item) => (
+            <Cell
+              cursor="pointer"
+              fill={
+                item.day === currentWeekday
+                  ? "hsl(var(--cyan))"
+                  : "hsl(var(--soft-red))"
+              }
+              key={`cell-${item.day}`}
+              className="hover:opacity-75"
+            />
+          ))}
+        </Bar>
+        ;
       </BarChart>
     </ResponsiveContainer>
   );
